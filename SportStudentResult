@@ -1,0 +1,31 @@
+package nandhu;
+
+		 interface Student {
+	            int score = 10;
+	            void displayScore();
+	        }
+
+	        interface SportsInterface {
+	            int score = 25;
+	            void displaySportScore();
+	        }
+
+	        class Result implements Student, SportsInterface {
+	            public void displayScore() {
+	                System.out.println("Academic score is: " + Student.score);
+	            }
+
+	            public void displaySportScore() {
+	                System.out.println("Sports score is: " + SportsInterface.score);
+	            }
+	        }
+
+	        class SportStudentResult {
+	            public static void main(String[] args) {
+	                Result r = new Result();
+	                r.displayScore();
+	                r.displaySportScore();
+	            }
+	        }
+	    
+	
